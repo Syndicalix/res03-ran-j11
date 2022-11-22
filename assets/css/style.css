@@ -161,3 +161,7 @@ body > main > section:last-of-type > main > form {
 body > footer {
     background-color: #253879;
 }
+
+.erreur {
+    color:red;
+}
