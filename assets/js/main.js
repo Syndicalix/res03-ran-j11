@@ -20,11 +20,12 @@ form.addEventListener("submit", function(e){
         usernameInput.classList.add("erreur");
         fieldset.appendChild(inputError);
     }
- //*
+ //* *//
  
         let emailInput = document.querySelector("#email");
         if (usernameInput.value !== "")
-    
+     //*   else if(emailInput.value.indexof("@,0")<0 || emailInput.value.indexof(".",0)<0); *//
+
     {
         e.target.submit();
     }
@@ -39,8 +40,10 @@ form.addEventListener("submit", function(e){
         fieldset.appendChild(inputError);
     }
 
+    let passwordnameInput = document.querySelector("#password");
     let confirmpasswordnameInput = document.querySelector("#confirm-password");
-    if (usernameInput.value !== "")
+        
+        if (usernameInput.value !== "")
     
     {
         e.target.submit();
@@ -49,11 +52,12 @@ form.addEventListener("submit", function(e){
     {
         let inputError = document.createElement("p");
         let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(4)");
+
         
         inputError.innerHTML="Les mots de passe ne correspondent pas";
         inputError.classList.add("erreur");
         confirmpasswordnameInput.classList.add("erreur");
         fieldset.appendChild(inputError);
+        
     }
-    
 })
